@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hello Doctor</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+        nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            /* background-color: gray; */
+            width: 100%;
+            margin: auto;
+        }
+        nav .logo{
+            width: 10%;
+            cursor: pointer;
+        }
+        nav .logo img{
+            width: 60%;
+        }
+        nav .navbar{
+            width: 40%;
+            justify-content: space-around;
+            display: flex;
+            padding: 0px 10px;
+        }
+        nav .navbar a{
+            font-weight: bold;
+            color: gray;
+
+            font-size: clamp(12px,2vw,20px);
+        }
+        .search{
+            width: 20%;
+        }
+        .search input{
+            width: 100%;
+            padding: 10px;
+            border-radius: 20px;
+        }
+        .search input::placeholder{
+            font-size: 20px;
+            color: gray;
+            padding: 10px 15px;
+            margin-top: 50px;
+        }
+
+        #doc{
+            width: 90%;
+            margin:50px auto;
+
+        }
+
+        .doctor_section{
+            display: grid;
+            width: 100%;
+            margin: auto;
+            grid-template-columns: repeat(2,1fr);
+            gap: 70px;
+        }
+        .doc_text{
+            width: 100%;
+        }
+        .doc_text img{
+            width: 100%;
+            color: green;
+            aspect-ratio: 5/0.8;
+        }
+
+        .doc_text h1{
+            font-size: 50px;
+        }
+        .doc_text p{
+            margin-top: 15px;
+            font-size: 25px;
+            color: gray;
+        }
+
+        .doc_text button{
+            margin-top: 70px;
+            padding: 20px 80px;
+            color: rgb(249, 245, 245);
+            background-color: #5284b5;
+            border: none;
+        }
+        .img_Doc_sec{
+            width: 100%;
+            display: flex;
+            place-content: end;
+
+        }
+        .img_Doc_sec img{
+            width: 70%;
+            border-top: 2px solid green;
+
+            border-top-left-radius: 50%;
+            border-top-right-radius: 50%;
+
+        }
+        .BlueBox{
+            width: 90%;
+            margin: auto;
+            height: 20vh;
+            background-color: rgb(82,132,181) ;
+        }
+
+
+        #Helth_statement{
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            margin: 50px auto;
+        }
+        #Helth_statement div h1{
+            width: 70%;
+        }
+        #Helth_statement div p{
+            width: 60%;
+            display: flex;
+            float: right;
+            font-size: 20px;
+            color: gray;
+            opacity: .9;
+        }
+
+
+         /* <------------------- SERVICES-------------------------> */
+         #services{
+            width: 90%;
+            margin: 50px auto;
+         }
+         #container{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 20px;
+         }
+         #container div{
+            background-color: red;
+            text-align: center;
+            padding: 60px 0px;
+         }
+          #container div:nth-child(1){
+            background-color: #cfe5fe;
+          }
+          #container div:nth-child(2){
+            background-color: #e0eeff;
+          }
+            #container div:nth-child(3){
+            background-color: #f1f5e9;
+          }
+                      #container div:nth-child(4){
+            background-color: rgb(233,247,248);
+          }
+         #container div img{
+            width: 20%;
+            aspect-ratio: 7/7;
+
+         }
+         #container div p{
+            padding: 10px 0px;
+            font-size: 20px;
+            font-weight: bold;
+         }
+
+
+         /* <----------------------------Section Speclist ----------------> */
+            #speciallist{
+                width: 90%;
+                margin: 50px auto;
+                padding: 50px;
+                background-color: #5284b5;
+            }
+            #speciallist h2 {
+                color: #f1f5e9;
+                font-size: clamp(13px,4vw,25px);
+            }
+            #speciallist h3{
+                    color: #f1f5e9;
+                font-size: clamp(13px,4vw,22px);
+            }
+
+
+            .specail_list_box{
+                display: grid;
+                grid-template-columns: repeat(4,1fr);
+                gap: 50px;
+                margin-top: 50px;
+
+            }
+            .specail_list_box div{
+                border: 1px solid rgba(244, 238, 238, 0.284);
+                padding: 15px;
+                border-radius: 5px;
+                color: white;
+
+            }
+
+
+            .specail_list_box div p{
+            color: rgba(255, 248, 248, 0.841);
+            padding: 10px 0px ;
+            font-size: clamp(12px ,3vw,18px);
+            line-height: 30px;
+            }
+            .specail_list_box .img_card{
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                border: none;
+                padding: 15px 0px;
+
+            }
+            .specail_list_box .img_card img{
+                width: 20%;
+            }
+
+
+            /* ------------------------top specil List ---------------------------- */
+            #top_specialList{
+                width: 90%;
+                margin: 50px auto;
+            }
+            .top_special{
+                display: grid;
+                grid-template-columns: repeat(4,1fr);
+                gap: 50px;
+
+            }
+            .top_special div{
+                padding: 10px;
+                border: 1px solid rgba(0, 179, 255, 0.766);
+                text-align: center;
+                border-radius: 5px;
+            }
+            .top_special div img{
+                width: 100%;
+                aspect-ratio: 3/2;
+            }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <div class="logo"><img src="image/doc.png" alt=""></div>
+        <div class="navbar">
+            <a href="#">Home</a>
+            <a href="#">Our Services</a>
+            <a href="#">Find Doctor</a>
+            <a href="#">Login/Register</a>
+        </div>
+        <div class="search"><input type="text" placeholder="Search"></div>
+    </nav>
+</header>
+
+<section id="doc">
+    <div class="doctor_section">
+        <div class="doc_text">
+            <h1>Doc-Q- Where your Time Metter As Much As Your Health</h1>
+            <img src="image/heartbeat.jpg" alt="">
+            <p>Break free from waiting for doctor appointments! Prioritizing your time with swift consultations, surgeries, and rapid medical services for a healthier, hassle-free experience."</p>
+            <button>Book Appointment</button>
+        </div>
+        <div class="img_Doc_sec">
+            <img src="image/doctor.jpg" alt="">
+        </div>
+    </div>
+</section>
+<div class="BlueBox"></div>
+<section id="Helth_statement">
+    <div>
+        <h1>Your health requirements are our first focus.</h1>
+    </div>
+    <div>
+         <p>Our team of skilled medical professionals and aids ensure that you get the care you need and deserve.</p>
+    </div>
+
+</section>
+<section id="services">
+    <div class="container" id="container">
+
+    </div>
+</section>
+
+
+<section id="speciallist">
+    <h2>Looking For A SpecialList</h2>
+<div class="specail_list_box" id="specail_list_box">
+
+</div>
+</section>
+
+<section id="top_specialList">
+    <div class="top_special" id="top_special">
+
+    </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
